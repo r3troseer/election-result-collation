@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Local Government Area Results</h1>
+
+<form method="get" action="{% url 'lga_results' %}">
+    <label for="lga_id">Select LGA:</label>
+    <select class="form-select"  name="lga_id" id="lga_id">
+        <option value="">--Select LGA--</option>
+        {% for lga in lgas %}
+        <option value="{{ lga.lga_id }}" {% if lga.lga_id == lga_id %}selected{% endif %}>{{ lga.lga_name }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" class="btn btn-outline-primary" value="Get Results">
+</form>
+
+{% if total_results %}
+<h2>Results for {{ lga.lga_name }}</h2>
+<table class="table mb-0">
+    <thead>
+        <tr>
+            <th>Party</th>
+            <th>Score</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for result in total_results %}
+        <tr>
+            <td>{{ result.party_abbreviation }}</td>
+            <td>{{ result.total }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+{% endblock %}

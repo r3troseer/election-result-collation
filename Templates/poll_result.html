@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- <form id="search_form" name="gs" method="POST">
+        {% csrf_token %}
+        {{form}}
+    <a type="submit" class="btn btn-primary"" value="submit" role="button" href="{% url 'poll_result' %}?q={{polling_unit}}">Submit</a>
+
+    </form> -->
+<div class="row">
+    <div class="dropdown ">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            Polling unit number
+        </button>
+        <ul class="dropdown-menu">
+            <li>
+                <h6 class="dropdown-header">Tags</h6>
+            </li>
+            {% for polll in polling_unit_number %}
+            <li><a class="dropdown-item"
+                    href="{% url 'poll_result' %}?q={{polll.polling_unit_id}}">{{polll.get_unit}}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <table class="table mb-0">
+        <thead>
+            <tr>
+                <th scope="col">Party</th>
+                <th scope="col">Party Score</th>
+            </tr>
+        </thead>
+
+        {% for poll in polls %}
+        <tr class="fw-normal">
+            <th>
+                <span class="ms-2">{{poll.party_abbreviation}}</span>
+            </th>
+            <td class="align-middle">
+                <span>{{poll.party_score}}</span>
+            </td>
+
+        </tr>
+
+        {%endfor%}
+    </table>
+</div>
+{% endblock%}
