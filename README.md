@@ -5,9 +5,9 @@ This is a Django-based web application that helps collate election results from 
 
 **Features**:
 
--View the result of any individual polling unit.
--View the summed total result of all polling units under any particular local government.
--Store results for all parties for a new polling unit.
+- View the result of any individual polling unit.
+- View the summed total result of all polling units under any particular local government.
+- Store results for all parties for a new polling unit.
 
 
 **Installation**
@@ -38,7 +38,9 @@ python manage.py runserver
 **Usage**
 
 To view the result of any individual polling unit, go to http://localhost:8000/polling-unit-result/?q=<polling_unit_uniqueid> where <polling_unit_uniqueid> is the unique ID of the polling unit.
+
 To view the summed total result of all polling units under any particular local government, go to http://localhost:8000/lga-results/ and select the desired local government from the dropdown list.
+
 To store results for all parties for a new polling unit, go to http://localhost:8000/new-polling-unit-result/ and fill out the form.
 
 
