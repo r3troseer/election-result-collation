@@ -18,3 +18,4 @@ class PollingUnitResultForm(forms.ModelForm):
         entered_by_user=cleaned_data.get('entered_by_user')
         date_entered=cleaned_data.get('date_entered')
         user_ip_address=cleaned_data.get('user_ip_address')
+        return cleaned_data

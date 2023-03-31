@@ -14,7 +14,7 @@ This is a Django-based web application that helps collate election results from 
 
 1. Clone the repository to your local machine:
 ```
-git clone https://github.com/username/election-result-collation.git
+git clone https://github.com/r3troseer/election-result-collation.git
 ```
 
 2. Install the required Python packages:
