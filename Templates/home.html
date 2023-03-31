@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+<div class="btn-group">
+    <a href="{% url 'poll_result' %}" class="btn btn-primary ">Question 1: Poll Result</a>
+    <a href="{% url 'lga_results' %}" class="btn btn-primary">Question 2: LGA Result</a>
+    <a href="{% url 'add_polling_unit_result' %}" class="btn btn-primary">Question 3: Add Polling Unit</a>
+  </div>
+
+{% endblock %}

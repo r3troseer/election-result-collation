@@ -5,7 +5,8 @@ from .models import AnnouncedPuResults, Lga, PollingUnit
 
 
 # Create your views here.
-
+def home(request):
+    return render(request, 'home.html')
 
 def polling_unit_result(request):
     # get the 'q' parameter from the request GET dictionary
