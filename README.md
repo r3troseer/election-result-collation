@@ -1,4 +1,4 @@
-#### Election Result Collation System
+## Election Result Collation System
 
 This is a Django-based web application that helps collate election results from polling units across various local governments in Delta State.
 
