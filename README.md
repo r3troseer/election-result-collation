@@ -35,15 +35,15 @@ python manage.py runserver
 5. Open your web browser and go to http://localhost:8000/ to view the application.
 
 
->**Usage**
+**Usage**
 
->>To view the result of any individual polling unit, go to http://localhost:8000/polling-unit-result/?q=`<polling_unit_uniqueid>` where `<polling_unit_uniqueid>` is the unique ID of the polling unit.
+- To view the result of any individual polling unit, go to http://localhost:8000/polling-unit-result/?q=`<polling_unit_uniqueid>` where `<polling_unit_uniqueid>` is the unique ID of the polling unit.
 
->>To view the summed total result of all polling units under any particular local government, go to http://localhost:8000/lga-results/ and select the desired local government from the dropdown list.
+- To view the summed total result of all polling units under any particular local government, go to http://localhost:8000/lga-results/ and select the desired local government from the dropdown list.
 
->>To store results for all parties for a new polling unit, go to http://localhost:8000/new-polling-unit-result/ and fill out the form.
+- To store results for all parties for a new polling unit, go to http://localhost:8000/new-polling-unit-result/ and fill out the form.
 
 
->**Contributing**
+**Contributing**
 
->>Contributions are welcome! If you find any issues or have suggestions for improvement, please create a GitHub issue or submit a pull request.
+Contributions are welcome! If you find any issues or have suggestions for improvement, please create a GitHub issue or submit a pull request.
