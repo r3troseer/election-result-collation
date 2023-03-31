@@ -3,12 +3,10 @@
 This is a Django-based web application that helps collate election results from polling units across various local governments in Delta State.
 
 
-**Features**
+**Features**:
 
 -View the result of any individual polling unit.
-
 -View the summed total result of all polling units under any particular local government.
-
 -Store results for all parties for a new polling unit.
 
 
