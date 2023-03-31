@@ -6,7 +6,8 @@ from .models import AnnouncedPuResults, Lga, PollingUnit
 
 # Create your views here.
 def home(request):
-    return render(request, 'home.html')
+    return render(request, "home.html")
+
 
 def polling_unit_result(request):
     # get the 'q' parameter from the request GET dictionary
@@ -62,13 +63,19 @@ def lga_results(request):
             .annotate(total=Sum("party_score"))
             .order_by("-total")
         )
-
     # Prepare the context to be passed to the template
-    context = {
-        "lga": lga,  # The selected LGA (if any)
-        "lgas": lgas,  # All LGAs
-        "total_results": total_results,  # The total results for the selected LGA (if any)
-    }
+    if lga_id:
+        context = {
+            "lga": lga,  # The selected LGA (if any)
+            "lgas": lgas,  # All LGAs
+            "total_results": total_results,  # The total results for the selected LGA (if any)
+        }
+
+    else:
+        context = {
+            "lgas": lgas,  # All LGAs
+            "total_results": total_results,  # The total results for the selected LGA (if any)
+        }
 
     # Render the template and return the resulting HTTP response
     return render(request, "lga_results.html", context)
